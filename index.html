@@ -23,10 +23,10 @@
         <p>Losses: <span class="losses-count"></span></p>
     </div>
 
-    <button class="crytal-pics" id="pic1"><img src="assets/images/crystal4.jpg" alt ="img1"></button>
-    <button class="crystal-pics" id="pic2"><img src ="assets/images/crystal1.jpg" alt ="img2"></button>
-    <button class="crystal-pics" id="pic3"><img src ="assets/images/crystal2.jpg" alt ="img3"></button>
-    <button class="crytal-pics" id="pic4"><img src = "assets/images/crystal3.jpg" alt ="img4"></button>
+    <button class="crytal-pics"><img id="pic1" src="assets/images/crystal4.jpg" alt ="img1"></button>
+    <button class="crystal-pics"><img id="pic2" src ="assets/images/crystal1.jpg" alt ="img2"></button>
+    <button class="crystal-pics"><img id="pic3" src ="assets/images/crystal2.jpg" alt ="img3"></button>
+    <button class="crytal-pics"><img id="pic4" src = "assets/images/crystal3.jpg" alt ="img4"></button>
 
     <div>
         <p>Your total score is: </p>
@@ -39,20 +39,70 @@
     var wins;
     var losses;
     var totalScore;
+    var randomNum;
+    var picOne;
+    var picTwo;
+    var picThree;
+    var picFour;
 
     
-
-    // function getRandomNum (min, max) {
-    //     return Math.random() * (max - min) + min;
-    // }
-    
-    var randomNum = Math.floor(Math.random() * 120 - 19) + 19;
-    $("#random-number").text(randomNum);
-    document.ready = function(event) {
-
-
-
+    //Generates a new random number when called
+    function getRandomNum () {
+        randomNum = Math.floor(Math.random() * 120 - 19) +19;
+        return $("#random-number").text(randomNum);
     }
+    getRandomNum();
+
+    //Reset total score to 0 
+    function resetScore () {
+        totalScore = 0;
+        return $(".total-score").text(totalScore);
+    }
+    resetScore();
+
+    //Generates new button value
+    function newButValue () {
+        picOne = Math.floor(Math.random() * 12 - 1) + 1;
+        picTwo = Math.floor(Math.random() * 12 - 1) + 1;
+        picThree = Math.floor(Math.random() * 12 - 1) + 1;
+        picFour = Math.floor(Math.random() * 12 - 1) + 1;
+    }
+    newButValue();
+
+    
+
+    $(document).ready(function() {
+
+
+      $("#pic1").on("click", function() {
+
+        totalScore = totalScore + picOne;
+        $(".total-score").text(totalScore);
+    
+      });
+
+      $("#pic2").on("click", function() {
+        
+        totalScore = totalScore + picTwo;
+        $(".total-score").text(totalScore)
+
+      });
+
+      $("#pic3").on("click", function() {
+        
+        totalScore = totalScore + picThree;
+        $(".total-score").text(totalScore)
+
+      });
+
+      $("#pic4").on("click", function() {
+        
+        totalScore = totalScore + picFour;
+        $(".total-score").text(totalScore)
+
+      });
+
+    });
 
     </script>
     
