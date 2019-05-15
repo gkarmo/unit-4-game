@@ -1,0 +1,33 @@
+body {
+    background-color: brown;
+    /* background-image: url("/assets/images/background.jpg"); */
+}
+
+h1 {
+    background-color: lime;
+    padding: 20px;
+}
+
+.rules {
+    background-color: burlywood;
+    padding-bottom: 25px;
+
+}
+
+#random-number {
+    background-color: purple;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.record-col {
+    background-color: lightblue;
+}
+
+.score-prompt {
+    background-color: darkgreen;
+}
+
+.total-score {
+    background-color: darkgreen;
+}

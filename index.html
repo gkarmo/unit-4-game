@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -29,7 +31,7 @@
     <button class="crystal-pics"><img id="pic3" src ="assets/images/crystal2.jpg" alt ="img3"></button>
     <button class="crytal-pics"><img id="pic4" src = "assets/images/crystal3.jpg" alt ="img4"></button>
 
-    <div>
+    <div class="score-prompt">
         <p>Your total score is: </p>
     </div>
 
@@ -70,6 +72,7 @@
     }
     newButValue();
 
+    //Updates game
     function gameRules () {
         if (totalScore == randomNum) {
           $(".outcome").text("YOU WIN!!");
@@ -129,28 +132,6 @@
       });
 
     });
-
-    //   if (totalScore == randomNum) {
-    //       $(".outcome").text("YOU WIN!!");
-    //       wins++;
-    //       getRandomNum();
-    //       newButValue();
-    //       resetScore();
-    //       $(".win-count").text(wins);
-    //   } 
-    //   if (totalScore > randomNum) {
-    //     $(".outcome").text("YOU LOSE :(");
-    //       losses++;
-    //       getRandomNum();
-    //       newButValue();
-    //       resetScore();
-    //       $(".losses-count").text(losses);
-    //   } 
-      //$(".win-count").text(wins);
-      //$(".losses-count").text(losses);
-
-      
-
 
 
     
