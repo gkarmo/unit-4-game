@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Crystal Collectors</h1>
@@ -16,7 +17,7 @@
         <p>Each time when the game starts, the game wiill change the value of each crystal.</p>
     </div>
 
-    <div class="random-number"></div>
+    <div id="random-number"></div>
     <div class="record-col">
         <p>Wins: <span class="win-count"></span></p>
         <p>Losses: <span class="losses-count"></span></p>
@@ -32,6 +33,28 @@
     </div>
 
     <div class="total-score"></div>
+
+    <script type = "text/javascript">
+
+    var wins;
+    var losses;
+    var totalScore;
+
+    
+
+    // function getRandomNum (min, max) {
+    //     return Math.random() * (max - min) + min;
+    // }
+    
+    var randomNum = Math.floor(Math.random() * 120 - 19) + 19;
+    $("#random-number").text(randomNum);
+    document.ready = function(event) {
+
+
+
+    }
+
+    </script>
     
 </body>
 </html>
