@@ -19,6 +19,7 @@
 
     <div id="random-number"></div>
     <div class="record-col">
+        <p class="outcome"></p>
         <p>Wins: <span class="win-count"></span></p>
         <p>Losses: <span class="losses-count"></span></p>
     </div>
@@ -36,8 +37,8 @@
 
     <script type = "text/javascript">
 
-    var wins;
-    var losses;
+    var wins = 0;
+    var losses = 0;
     var totalScore;
     var randomNum;
     var picOne;
@@ -69,40 +70,90 @@
     }
     newButValue();
 
+    function gameRules () {
+        if (totalScore == randomNum) {
+          $(".outcome").text("YOU WIN!!");
+          getRandomNum();
+          newButValue();
+          resetScore();
+            wins++;
+          $(".win-count").text(wins);
+      } 
+      if (totalScore > randomNum) {
+        $(".outcome").text("YOU LOSE :(");
+          getRandomNum();
+          newButValue();
+          resetScore();
+          losses++;
+          $(".losses-count").text(losses);
+      } 
+    }
+
     
 
     $(document).ready(function() {
 
-
+    // The following adds pic's number to total score
       $("#pic1").on("click", function() {
 
         totalScore = totalScore + picOne;
         $(".total-score").text(totalScore);
+        gameRules();
     
       });
 
       $("#pic2").on("click", function() {
         
         totalScore = totalScore + picTwo;
-        $(".total-score").text(totalScore)
+        $(".total-score").text(totalScore);
+        gameRules();
+
 
       });
 
       $("#pic3").on("click", function() {
         
         totalScore = totalScore + picThree;
-        $(".total-score").text(totalScore)
+        $(".total-score").text(totalScore);
+        gameRules();
+ 
 
       });
 
       $("#pic4").on("click", function() {
         
         totalScore = totalScore + picFour;
-        $(".total-score").text(totalScore)
+        $(".total-score").text(totalScore);
+        gameRules();
 
       });
 
     });
+
+    //   if (totalScore == randomNum) {
+    //       $(".outcome").text("YOU WIN!!");
+    //       wins++;
+    //       getRandomNum();
+    //       newButValue();
+    //       resetScore();
+    //       $(".win-count").text(wins);
+    //   } 
+    //   if (totalScore > randomNum) {
+    //     $(".outcome").text("YOU LOSE :(");
+    //       losses++;
+    //       getRandomNum();
+    //       newButValue();
+    //       resetScore();
+    //       $(".losses-count").text(losses);
+    //   } 
+      //$(".win-count").text(wins);
+      //$(".losses-count").text(losses);
+
+      
+
+
+
+    
 
     </script>
     
