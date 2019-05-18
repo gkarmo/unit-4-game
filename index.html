@@ -51,7 +51,7 @@
     
     //Generates a new random number when called
     function getRandomNum () {
-        randomNum = Math.floor(Math.random() * 120 - 19) +19;
+        randomNum = Math.floor(Math.random() * 102) +19;
         return $("#random-number").text(randomNum);
     }
     getRandomNum();
@@ -65,10 +65,10 @@
 
     //Generates new button value
     function newButValue () {
-        picOne = Math.floor(Math.random() * 12 - 1) + 1;
-        picTwo = Math.floor(Math.random() * 12 - 1) + 1;
-        picThree = Math.floor(Math.random() * 12 - 1) + 1;
-        picFour = Math.floor(Math.random() * 12 - 1) + 1;
+        picOne = Math.floor(Math.random() * 12) + 1;
+        picTwo = Math.floor(Math.random() * 12) + 1;
+        picThree = Math.floor(Math.random() * 12) + 1;
+        picFour = Math.floor(Math.random() * 12) + 1;
     }
     newButValue();
 
@@ -82,7 +82,7 @@
             wins++;
           $(".win-count").text(wins);
       } 
-      if (totalScore > randomNum) {
+      else if (totalScore > randomNum) {
         $(".outcome").text("YOU LOSE :(");
           getRandomNum();
           newButValue();
