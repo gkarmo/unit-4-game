@@ -1,16 +1,22 @@
 body {
-    background-color: brown;
+    background-color: white;
     /* background-image: url("/assets/images/background.jpg"); */
 }
 
 h1 {
-    background-color: lime;
+    /* background-color: lime; */
     padding: 20px;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+    background-image: url("/assets/images/crysback.jpg");
 }
 
 .rules {
     background-color: burlywood;
     padding-bottom: 25px;
+    text-align: center;
+    font-family: 'Arapey', serif;
 
 }
 
@@ -18,16 +24,24 @@ h1 {
     background-color: purple;
     padding-right: 30px;
     padding-bottom: 30px;
+    text-align:center;
 }
 
 .record-col {
     background-color: lightblue;
+    text-align: center;
 }
 
 .score-prompt {
     background-color: darkgreen;
+    text-align: center;
 }
 
 .total-score {
     background-color: darkgreen;
+    text-align: center;
+}
+
+.pic-div {
+    text-align:center;
 }
